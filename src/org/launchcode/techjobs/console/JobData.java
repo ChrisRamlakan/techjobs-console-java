@@ -51,8 +51,8 @@ public class JobData {
 
     // load data, if not already loaded
     loadData();
-
-    return allJobs;
+//    ArrayList<HashMap<String,String>>
+    return (ArrayList)allJobs.clone();
   }
 
   /**
@@ -81,7 +81,8 @@ public class JobData {
         jobs.add(row);
       }
     }
-    return (ArrayList)jobs.clone();
+
+    return jobs;
   }
 
   public static ArrayList<HashMap<String, String>> findByValue(String value){
